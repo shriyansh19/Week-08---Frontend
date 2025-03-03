@@ -8,12 +8,10 @@ const readline = require("readline").createInterface({
 // Take user input for n
 readline.question("Enter the value of n: ", (input) => {
     let n = parseInt(input);
-    let power = 0;
 
     console.log("Powers of 2:");
-    while (power <= n && Math.pow(2, power) <= 256) {
-        console.log(`2^${power} = ${Math.pow(2, power)}`);
-        power++;
+    for (let i = 0; i <= n; i++) {
+        console.log(`2^${i} = ${Math.pow(2, i)}`);
     }
 
     readline.close();
